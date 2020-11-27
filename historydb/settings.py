@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'main.apps.MainConfig',
     'repo.apps.RepoConfig',
     'rest_api_test.apps.RestApiTestConfig',
     'polls.apps.PollsConfig',
