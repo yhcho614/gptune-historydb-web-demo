@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        History Database Repository
+
+        {% if latest_perf_file_list %}
+        <ul>
+        {% for perf_file in latest_perf_file_list %}
+            <li><a href="/repo/{{ perf_file.id }}/">{{ perf_file.name }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p> No performance files are available.</p>
+        {% endif %}
+
+    </body>
+</html>
