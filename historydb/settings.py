@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'main.apps.MainConfig',
     'repo.apps.RepoConfig',
+    'blog.apps.BlogConfig',
     'rest_api_test.apps.RestApiTestConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',

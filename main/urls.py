@@ -10,6 +10,7 @@ app_name = "main"
 urlpatterns = [
     path('', views.index, name='index'),
     url(r'^repo/', include('repo.urls')),
+    url(r'^blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
     url(r'^polls/', include('polls.urls')),
     #url('^admin/', include('admin.site.urls')),

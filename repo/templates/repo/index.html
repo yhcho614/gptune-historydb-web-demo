@@ -10,7 +10,7 @@
         {% if latest_perf_file_list %}
         <ul>
         {% for perf_file in latest_perf_file_list %}
-            <li><a href="/repo/{{ perf_file.id }}/">{{ perf_file.name }}</a></li>
+            <li><a href="/repo/{{ perf_file.id }}/">{{ perf_file.app_name }}</a></li>
         {% endfor %}
         </ul>
         {% else %}

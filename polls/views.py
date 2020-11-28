@@ -43,10 +43,9 @@ from datetime import datetime
 from django.utils import timezone
 
 def query(request, question_id):
-    fb = Question(question_text = '####', pub_date = datetime.now()) #timezone.now() + datetime.timedelta(days=30))
-    fb.save()
+    #fb = Question(question_text = '####', pub_date = datetime.now()) #timezone.now() + datetime.timedelta(days=30))
+    #fb.save()
 
-    print ("#####")
     return HttpResponse("SASDFASDF question %s." % question_id)
 
 #def get(request):
