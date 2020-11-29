@@ -1,0 +1,31 @@
+<!-- blog>templates>blog>post_upload.html -->
+
+<head>
+  <meta charset="utf-8">
+  <title>Upload performance file</title>
+</head>
+
+<body>
+
+  {% block content %}
+
+  <br>
+  <div class="container">
+  	<form action="{% url 'repo:perf_upload' %}">
+  	  <h4>Application name</h4>
+  	  <input type="text" name="app_name">
+  	  <br>
+  	  <h4>User name</h4>
+  	  <input type="text" name="user_name">
+  	  <br>
+  	  <h4>Perf data (JSON)</h4>
+  	  <textarea cols=40 rows=10 name="perf_data"></textarea>
+  	  <br>
+  	  <br>
+  	  <input class="btn btn-dark" type="submit" value="Submit">
+    </form>
+  </div>
+
+  {% endblock %}
+
+</body>

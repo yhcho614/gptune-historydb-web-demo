@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <p>History Database Data Details</p>
+        <p>
+        <pre>{{ json_detail | pprint }}</pre>
+        </p>
+
+        <span>
+          <a href="{% url 'repo:index' %}">Go to repo</a>
+        </span>
+
+    </body>
+</html>

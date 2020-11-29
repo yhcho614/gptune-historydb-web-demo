@@ -5,12 +5,15 @@
         <title></title>
     </head>
     <body>
-        History Database Repository
+        <p>History Database Repository</p>
+        <span>
+          <a href="{% url 'repo:upload' %}">Upload</a>
+        </span>
 
         {% if latest_perf_file_list %}
         <ul>
         {% for perf_file in latest_perf_file_list %}
-            <li><a href="/repo/{{ perf_file.id }}/">{{ perf_file.app_name }}</a></li>
+          <li>{{ perf_file.pub_date|date:"Y-m-d"}}&nbsp;&nbsp;&nbsp;<a href="/repo/{{ perf_file.id }}/">{{ perf_file.app_name }}</a></li>
         {% endfor %}
         </ul>
         {% else %}
