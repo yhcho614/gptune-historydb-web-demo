@@ -35,6 +35,13 @@ class PostTAV(TodayArchiveView):
     model = Post
     date_field = 'mod_date'
 
+def show_archive(request):
+    latest_post_list = Post.objects.order_by('-pub_date')[:50]
+    context = {
+        'latest_post_list':latest_post_list,
+        }
+    return render(request, 'blog/post_archive.html', context)
+
 def create(request):
     return render(request, 'blog/post_create.html')
 
