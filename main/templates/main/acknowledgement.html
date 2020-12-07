@@ -47,10 +47,10 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'main:index' %}">Home<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown active">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repository</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="{% url 'repo:index' %}">Archive</a>
+          <a class="dropdown-item" href="#">Archive</a>
           <a class="dropdown-item" href="#">Performance data</a>
           <a class="dropdown-item" href="#">Surrogate models</a>
         </div>
@@ -62,10 +62,10 @@
         <a class="nav-link" href="#">Forum</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/gptune/GPTune/">GPTune</a>
+        <a class="nav-link" href="https://github.com/gptune/GPTune/tree/history_db">GPTune</a>
       </li>
-      <li class="nav-item">
-          <a class="nav-link" href="{% url 'main:acknowledgement' %}">Acknowledgements</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'main:acknowledgement' %}">Acknowledgements</a>
       </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0"> -->
@@ -78,25 +78,15 @@
 <main role="main" class="container">
 
   <div class="starter-template">
-    {% block content %}
+    <h1>Acknowledgements</h1>
     <br>
-    <div>
-          <p>History Database Repository</p>
-          <span>
-            <a href="{% url 'repo:upload' %}">Upload</a>
-          </span>
-
-          {% if latest_perf_file_list %}
-          <ul>
-          {% for perf_file in latest_perf_file_list %}
-          <li>{{ perf_file.pub_date|date:"Y-m-d"}}&nbsp;&nbsp;&nbsp;{{ perf_file.user_name }}&nbsp;&nbsp;&nbsp;<a href="/repo/{{ perf_file.id }}/">{{ perf_file.app_name }}</a></li>
-          {% endfor %}
-          </ul>
-          {% else %}
-          <p> No performance files are available.</p>
-          {% endif %}
-    </div>
-    {% endblock %}
+    <p class="lead">GPTune Copyright (c) 2019, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Dept. of Energy) and the University of California, Berkeley. All rights reserved.
+    <br>
+    If you have questions about your rights to use or distribute this software, please contact Berkeley Lab's Intellectual Property Office at IPO@lbl.gov.
+    <br>
+    NOTICE. This Software was developed under funding from the U.S. Department of Energy and the U.S. Government consequently retains certain rights. As such, the U.S. Government has been granted for itself and others acting on its behalf a paid-up, nonexclusive, irrevocable, worldwide license in the Software to reproduce, distribute copies to the public, prepare derivative works, and perform publicly and display publicly, and to permit other to do so.
+    </p>
+    <br><br>
   </div>
 
 </main><!-- /.container -->

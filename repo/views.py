@@ -10,19 +10,19 @@ from .models import PerfFile
 from django.shortcuts import render
 
 class UploadView(View):
-    #def get(self, request):
-    #    #latest_perf_file_list = PerfFile.objects.order_by('-pub_date')[:50]
-    #    #context = {
-    #    #        'latest_perf_file_list': latest_perf_file_list,
-    #    #        }
-    #    #return render(request, 'repo/index.html', context)
+    def get(self, request):
+        #latest_perf_file_list = PerfFile.objects.order_by('-pub_date')[:50]
+        #context = {
+        #        'latest_perf_file_list': latest_perf_file_list,
+        #        }
+        #return render(request, 'repo/index.html', context)
 
-    #    dummy_data = {
-    #        'name': 'HistoryDB',
-    #        'type': 'Repo',
-    #        'job': 'Service'
-    #    }
-    #    return JsonResponse(dummy_data)
+        dummy_data = {
+            'name': 'HistoryDB',
+            'type': 'Repo',
+            'job': 'Service'
+        }
+        return JsonResponse(dummy_data)
 
     def post(self, request):
         #perfdata = PerfFile()
@@ -32,7 +32,7 @@ class UploadView(View):
         #perfdata.pub_date = datetime.now()
         #perfdata.save()
 
-        print (request.body)
+        #print (request.body)
 
         request_json = json.loads(request.body)
         print (request_json)

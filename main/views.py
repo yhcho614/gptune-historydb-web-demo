@@ -4,3 +4,7 @@ from django.shortcuts import render
 def index(request):
     return render(request,'main/index.html')
 
+def acknowledgement(request):
+    print ("!@#!@!@#")
+    return render(request,'main/acknowledgement.html')
+
